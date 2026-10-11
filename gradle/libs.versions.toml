@@ -19,6 +19,7 @@ micronaut-inject-java = { module = "io.micronaut:micronaut-inject-java", version
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 slf4j-jul = { module = "org.slf4j:jul-to-slf4j", version.ref = "slf4j" }
 logback = "ch.qos.logback:logback-classic:1.6.5"
+graalvm-nativeimage = "org.graalvm.sdk:nativeimage:25.0.4"
 
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 signalnetwork = { module = "com.github.turasa:signal-network", version.ref = "signal-service" }

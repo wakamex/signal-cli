@@ -36,6 +36,7 @@ graalvmNative {
             buildArgs.add("-J-Dfile.encoding=UTF-8")
             buildArgs.add("-march=compatibility")
             buildArgs.add("--enable-native-access=ALL-UNNAMED")
+            buildArgs.add("--features=org.asamk.signal.graal.LibsignalJniFeature")
             resources.autodetect()
             if (System.getenv("GRAALVM_HOME") == null) {
                 toolchainDetection.set(true)
@@ -104,6 +105,7 @@ dependencies {
         implementation(libs.micronaut.json.schema.generator)
     }
     implementation(project(":libsignal-cli"))
+    compileOnly(libs.graalvm.nativeimage)
 
     testImplementation(libs.junit.jupiter)
     testImplementation(platform(libs.junit.jupiter.bom))
